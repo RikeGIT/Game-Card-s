@@ -179,10 +179,37 @@ body {
 
 .botão-central{
     width: 16em;
+    align-items: center;
     height: 3em;
+    font-size: 0.8em;
     cursor: pointer;
-    border-color: #4B9CD3;
+    border: none;
     border-radius: 0.5em;
     background-color: #4B9CD3;
     color: #ffffff;
+    transition: 0.5s;
+}
+
+.botão-central:hover{
+    transform: scale(1.1);
+    border-color: #236896;
+    background-color: #236896;
+    color: #ffffff;
+}
+
+@keyframes aparecerDeBaixo {
+    0% {
+        transform: translateY(100%);  
+        opacity: 0;               
+    }
+    100% {
+        transform: translateY(0);    
+        opacity: 1;                  
+    }
+}
+
+.texto-central-container {
+    animation: aparecerDeBaixo 1s ease-out forwards; 
+    opacity: 0;                            
+    transform: translateY(100%);           
 }
