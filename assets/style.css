@@ -1,4 +1,4 @@
-/* Configurações inicias da pagina */
+/* Configurações iniciais da pagina */
 * {
     margin: 0;
     padding: 0;
@@ -62,7 +62,7 @@
 }
   
   
-body {
+body{
     background-color: #101621;
     color: #fff;
     text-align: center;
@@ -90,14 +90,14 @@ body {
 }
 
 .menu-login {
-    font-size: 1.5em;
+    font-size: 1.3rem;
     color: #D1D3D9;
 }
 
 .menu-login {
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 1.5em;
 }
 
 .menu-login ul{
@@ -107,18 +107,53 @@ body {
 }
 
 .menu-login button {
+    display: flex;
     border: none;
     background: none;
     font-size: 1em;
     color: #D1D3D9;
     cursor: pointer;
     transition: 0.5s;
+    gap: 0;
+    align-items: center;
 }
 
 .menu-login button:hover{
     color: #ebeef5;
     transform: scale(1.1);
+} 
+
+
+.menu-logado {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    font-size: 1.3rem;
+    color: #D1D3D9;
 }
+
+.menu-logado ul, li{
+    display: flex;
+    list-style: none;
+    gap: 1.6em;
+}
+
+.menu-logado button {
+    display: flex;
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: #D1D3D9;
+    cursor: pointer;
+    transition: 0.5s;
+    gap: 0;
+    align-items: center;
+}
+
+.menu-logado button:hover{
+    color: #ebeef5;
+    transform: scale(1.1);
+} 
 
 .pesquisar-container {
     display: flex;
@@ -158,8 +193,6 @@ body {
     justify-content: center; 
 }
 
-/* Conteudo central */
-
 .texto-central-container {
     padding-top: 14em; 
     display: flex;
@@ -168,6 +201,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.welcome h2 {      
+    font-size: 2rem;
+    margin: 8.5rem;         
+  }
 
 .texto-central{
     width: 12em;
@@ -208,8 +246,109 @@ body {
     }
 }
 
-.texto-central-container {
-    animation: aparecerDeBaixo 1s ease-out forwards; 
+.texto-central-container, .welcome{
+    animation: aparecerDeBaixo 2s ease-out forwards; 
     opacity: 0;                            
     transform: translateY(100%);           
 }
+
+.user-icon {
+    width: 42px; 
+    height: 42px; 
+    margin-right: 15px;
+}
+
+.feed-page {
+    margin-top: -100px;
+}
+.line-custom {
+    border: none;
+    height: 1px; /* Espessura da linha */
+    width: 80%; /* Ajusta largura da linha */
+    max-width: 2000px; /* Define um limite de largura máximo */
+    background: #ffffff; /* Cor da linha */
+    margin: 0 auto; /* Centraliza a linha horizontalmente */
+}
+.line-title {
+    font-size: 1.5rem; 
+}
+
+.line-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-right: 170px;
+    margin-left: 170px;
+}
+
+.more-btn {
+    display: flex;
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: #D1D3D9;
+    cursor: pointer;
+    transition: 0.5s;
+    gap: 0;
+}
+
+.games-section {
+  margin: 2rem auto;
+  max-width: 1200px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.games-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.games-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.add-game-btn {
+  background-color: #fdfdfd;
+  color: #3d3d3d;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-game-btn:hover {
+  background-color: #667796;
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ffffff;
+    min-height: 200px;
+    border-radius: 5px;
+    position: relative;
+    padding: 1rem;
+  }
+
+.placeholder {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.game-card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0.7rem;
+  }
+  
+  .game-card img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 4px 10px rgba(39, 37, 65, 0.5); 
+  }
+  
