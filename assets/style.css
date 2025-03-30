@@ -65,7 +65,6 @@
 body{
     background-color: #101621;
     color: #fff;
-    text-align: center;
     padding: 2% 4%;
 }
 
@@ -85,7 +84,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 54em;
+    width: 92%;
     z-index: 1000;
 }
 
@@ -250,6 +249,94 @@ body{
     margin-top: 18em;
 }
 
+/* Resenhas */
+.resenhas-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.5em;
+    margin-right: 10.6em;
+    margin-left: 10.6em;
+    gap: 4em;
+}
+
+.resenha-status-container{
+    display: flex;
+    transition: 0.5s;
+    gap: 1em;
+}
+
+.status{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+    gap: 0.6em;
+}
+
+.status p {
+    font-size: 0.9em;
+    width: 129px;
+    margin-bottom: 0.2em;
+}
+
+.nome-foto-usuario{
+    display: flex;
+    align-items: center;
+    margin-left: -0.3em;
+    gap: 0.4em;
+}
+
+.imagem-usuario {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+
+.star-5{
+    width: 5em;
+}
+
+.star-4{
+    width: 4em;
+}
+
+.star-3{
+    width: 3em;
+}
+
+.likes{
+    display: flex;
+    gap: 0.4em;
+    align-items: center;
+}
+
+.likes img{
+    width: 1em;
+    height: 1em;
+}
+
+.likes label {
+    font-size: 0.8em;
+}
+
+.resenha-img {
+    width: 130px;
+    height: 180px;
+}
+
+.resenhas {
+    margin-top: 3em;
+  }
+
+.resenha-status-container:hover {
+    transform: scale(1.1);
+}
+
 /* logado pagina */
 
 .texto-central-container, .welcome{
@@ -282,8 +369,8 @@ body{
 .line-container {
     display: flex;
     justify-content: space-between; 
-    margin-right: 170px;
-    margin-left: 170px;
+    margin-right: 10.6em;
+    margin-left: 10.6em;
 }
 
 .more-btn {
@@ -303,6 +390,13 @@ body{
   text-align: center;
   color: #ffffff;
 }
+
+.games-section-principal {
+    margin: 2rem auto;
+    max-width: 1400px;
+    text-align: center;
+    color: #ffffff;
+  }
 
 .games-header {
   display: flex;
@@ -333,19 +427,23 @@ body{
 
 .games-container {
     display: flex;
-    justify-content:start;
-    align-items: start;
+    justify-content:center;
+    align-items: center;
     border: 2px dashed #ffffff;
     min-height: 200px;
     border-radius: 5px;
     position: relative;
     padding: 1rem;
+    margin-right: 10.6em;
+    margin-left: 10.6em;
   }
 
 .placeholder {
   font-size: 1rem;
   opacity: 0.7;
 }
+
+
 
 .game-card img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -358,10 +456,6 @@ body{
     box-shadow: 0px 4px 10px rgba(39, 37, 65, 0.5); 
   }
   
-
-  .resenhas {
-    margin-top: 3em;
-  }
 
   .line-container h3 {
     font-size: 1em;
