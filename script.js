@@ -10,6 +10,15 @@ function gamepage() {
   window.location.href = "pages/gamepage.html";
 }
 
+const elements = document.querySelectorAll(".jogado, .curtir, .salvar");
+
+elements.forEach((element) => {
+  element.addEventListener("click", function () {
+    // Adiciona a classe 'clicked' ao elemento
+    element.classList.add("clicked");
+  });
+});
+
 let rankeamento = [];
 const stars = document.querySelectorAll(".star");
 const averageRatingEl = document.getElementById("media-de-estrelas");
