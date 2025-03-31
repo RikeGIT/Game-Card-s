@@ -19,36 +19,41 @@ elements.forEach((element) => {
   });
 });
 
-let rankeamento = [];
-const stars = document.querySelectorAll(".star");
-const averageRatingEl = document.getElementById("media-de-estrelas");
+document.addEventListener("DOMContentLoaded", function () {
+  const stars = document.querySelectorAll(".star");
+  const mediaDisplay = document.getElementById("media-de-estrelas");
+  let ratings = [4, 3, 5, 4];
+  atualizarMedia();
+  let avaliou = false;
 
-stars.forEach((star) => {
-  star.addEventListener("mouseover", function () {
-    resetStars();
-    const value = this.getAttribute("data-value");
-    highlightStars(value);
+  stars.forEach((star) => {
+    star.addEventListener("click", function () {
+      if (avaliou) {
+        alert("Você já avaliou este jogo!");
+        return;
+      }
+
+      const rating = parseInt(this.getAttribute("data-value"));
+      ratings.push(rating);
+      avaliou = true;
+      atualizarEstrelas(rating);
+      atualizarMedia();
+    });
   });
 
-  star.addEventListener("click", function () {
-    const value = parseInt(this.getAttribute("data-value"));
-    rankeamento.push(value);
-    updateAverageRating();
-  });
-});
-
-function highlightStars(value) {
-  for (let i = 0; i < value; i++) {
-    stars[i].classList.add("filled");
+  function atualizarEstrelas(rating) {
+    stars.forEach((star) => {
+      star.classList.toggle(
+        "active",
+        parseInt(star.getAttribute("data-value")) <= rating
+      );
+    });
   }
-}
 
-function resetStars() {
-  stars.forEach((star) => star.classList.remove("filled"));
-}
-
-function updateAverageRating() {
-  const sum = rankeamento.reduce((a, b) => a + b, 0);
-  const average = (sum / rankeamento.length).toFixed(1);
-  averageRatingEl.textContent = average;
-}
+  function atualizarMedia() {
+    if (ratings.length === 0) return;
+    const sum = ratings.reduce((acc, curr) => acc + curr, 0);
+    const average = (sum / ratings.length).toFixed(1);
+    mediaDisplay.textContent = average;
+  }
+});
