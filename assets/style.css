@@ -285,6 +285,7 @@ body{
     gap: 0.4em;
 }
 
+
 .imagem-usuario {
     width: 1.5em;
     height: 1.5em;
@@ -327,6 +328,9 @@ body{
 .resenha-img {
     width: 130px;
     height: 180px;
+    border-radius: 1em;
+    box-shadow: 0 6px 10px rgba(5, 5, 5, 0.705);
+    
 }
 
 .resenhas {
@@ -418,6 +422,7 @@ body{
     border-radius: 20px;
     cursor: pointer;
     transition: 0.5s;
+    box-shadow: 0 6px 10px rgba(8, 8, 8, 0.705);
 }
 
 .card:hover{
