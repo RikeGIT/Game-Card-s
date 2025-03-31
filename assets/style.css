@@ -624,8 +624,14 @@ body{
     flex-direction: column;
     padding-top: 1em;
     padding-bottom: 2em;
+    text-align: center;
     align-items: center;
     justify-content: center;
+   }
+
+   .container-stars p {
+    margin-top: 0.5em;
+    font-size: 1.1em;
    }
 
    .stars {
@@ -644,7 +650,8 @@ body{
         color: gold;
     }
 
-    .botoes {
+    .botoes,
+    .registre{
         width: 19em;
         height: 3em;
         border-radius: 3em;
@@ -657,8 +664,94 @@ body{
         transition: 0.5s;
         cursor: pointer;
     }
+    
 
-    .botoes:hover{
+    .botoes:hover,
+    .registre:hover{
         background-color: #1f222b;
         transform: scale(1.1);
     }
+
+    /* estilos para o modal de gamepage */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #343844;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+    animation: modalAparecer 0.4s ease-out;
+}
+
+@keyframes modalAparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fechar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar-modal:hover {
+    color: #fff;
+}
+
+.container-estrelas-modal {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.stars-modal {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.star-modal {
+    color: lightgray;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0 5px;
+}
+
+.star-modal.active {
+    color: gold;
+}
+
+.container-texto-resenha {
+    margin: 20px 0;
+}
+
+#texto-resenha {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1F1F1F;
+    color: white;
+    border: none;
+    resize: none;
+    font-family: "K2D", sans-serif;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamepage the last of us</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="body-gamepage">
+    <header class="cabecario">
+            <div class="logo">
+                <img class="logo-img" src="/assets/images/Logo.png" alt="logo da game cards">
+            </div>
+            <!-- NavBar -->
+            <nav class="menu-logado" alt="menu de opcao para perfil, jogos e saves">
+                <ul>
+                    <li><button><img class="user-icon" src="/assets/images/icon.png" alt="ícone do usuário"><strong>Usuario</strong></button></li>
+                    <li><button><img class="select-jogos"><strong>Jogos</strong></button></li>
+                    <li><button><img class="select-saves"><strong>Saves</strong></button></li>
+                </ul>
+                <section class="pesquisar-container">
+                    <input type="text" name="" id="">
+                    <button><img src="/assets/images/icone-pesquisar.png" alt=""></button>
+                </section>
+            </nav>
+    </header>
+
+    <main>
+        <div class = "background-tlou">
+            <img src="/assets/images/background-tlou.png" alt="">
+        </div>
+
+        <section class="game-container">
+            <section class="game-info">
+                <div>
+                    <img src="/assets/images/The last of us.png" alt="">
+                </div>
+    
+                <section>
+                    <div class="titulo-ano">
+                        <h1 class="titulo"><strong>The last of us</strong></h1>
+                        <h3 class="ano">2020</h2>
+                    </div>
+    
+                    <div class="diretor">
+                        <h3>Dirigido por</h3>
+                        <h2><strong>Bruce Straley</strong></h2>
+                    </div>
+
+                    <div class="sinopse">
+                        <p>Em uma civilização devastada, em que
+                            infectados e sobreviventes veteranos estão
+                            à solta, Joel, um protagonista abatido, é contratado
+                            para tirar uma garota de 14 anos, Ellie, de uma zona
+                            de quarentena militar. No entanto, o que começa
+                            como um pequeno serviço se transforma em
+                            uma jornada brutal através do país.</p>
+                    </div>
+                </section>
+
+                <section class="interacao-container">
+
+                    <section class="interacoes">
+                        <div class="jogado">
+                            <img class="icon-jogado" src="/assets/images/Jogado.png" alt="Marcar como jogado">
+                            <p>Jogado</p>
+                        </div>
+    
+                        <div class="curtir">
+                            <img class="icon-curtir" src="/assets/images/curtir.png" alt="Curtir jogo">
+                            <p>Curtir</p>
+                        </div>
+    
+                        <div class="salvar">
+                            <img class="icon-nuvem" src="/assets/images/nuvem.png" alt="Salvar jogo">
+                            <p>Salvar</p>
+                        </div>    
+                    </section>
+
+                    <section class="container-stars">
+                        <div class="game-card" data-game-id="tlou">
+                            <div class="stars">
+                              <span class="star" data-value="1">★</span>
+                              <span class="star" data-value="2">★</span>
+                              <span class="star" data-value="3">★</span>
+                              <span class="star" data-value="4">★</span>
+                              <span class="star" data-value="5">★</span>
+                            </div>
+                            <p>Média de avaliações: <span class="media-de-estrelas"></span></p>
+                          </div>
+                    </section>
+
+                    <button class="registre" data-game-id="tlou">Revise ou registre...</button>
+                    <button class="botoes">Compartilhar...</button>
+
+                    <section id="modal-resenha" class="modal">
+                        <div class="modal-content">
+                            <span class="fechar-modal">&times;</span>
+                            <h2>Escreva sua resenha</h2>
+                            
+                            <div class="container-estrelas-modal">
+                                <div class="stars-modal">
+                                    <span class="star-modal" data-value="1">★</span>
+                                    <span class="star-modal" data-value="2">★</span>
+                                    <span class="star-modal" data-value="3">★</span>
+                                    <span class="star-modal" data-value="4">★</span>
+                                    <span class="star-modal" data-value="5">★</span>
+                                </div>
+                                <p>Selecione uma classificação</p>
+                            </div>
+                            
+                            <div class="container-texto-resenha">
+                                <textarea id="texto-resenha" placeholder="Escreva sua resenha aqui..."></textarea>
+                            </div>
+                            
+                            <button class="botoes" id="enviar-resenha">Enviar resenha</button>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
